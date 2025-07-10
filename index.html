@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kominfo</title>
+  <link rel="icon" href="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Navbar -->
+<nav class="bg-orange-500 text-white sticky top-0 z-50">
+  <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
+    <div class="flex items-center gap-3">
+      <img src="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" alt="Logo" class="h-10">
+      <span class="text-xl font-semibold">KOMINFO</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#" class="hover:underline">Beranda</a>
+      <a href="profil.html" class="hover:underline">Profil</a>
+      <div class="relative group">
+        <button class="hover:underline">Layanan</button>
+        <div class="absolute hidden group-hover:block bg-white text-black shadow-md rounded mt-2 w-52">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Permohonan Informasi</a>
+          <a href="Layanan/pengajuan.html" class="block px-4 py-2 hover:bg-gray-100">Pengajuan Keberatan</a>
+        </div>
+      </div>
+      <a href="#Berita" class="hover:underline">Berita</a>
+      <a href="#Kontak" class="hover:underline">Kontak</a>
+    </div>
+    <div class="hidden md:flex items-center gap-2">
+      <input type="text" placeholder="Cari informasi..." class="w-48 px-3 py-1 rounded border border-gray-300 text-black" />
+      <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
+    </div>
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="focus:outline-none">
+        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <a href="#" class="block py-2">Beranda</a>
+    <a href="profil.html" class="block py-2">Profil</a>
+    <div>
+      <span class="block py-2">Layanan</span>
+      <div class="pl-4">
+        <a href="#" class="block py-1 text-sm">Permohonan Informasi</a>
+        <a href="Layanan/pengajuan.html" class="block py-1 text-sm">Pengajuan Keberatan</a>
+      </div>
+    </div>
+    <a href="#Berita" class="block py-2">Berita</a>
+    <a href="#Kontak" class="block py-2">Kontak</a>
+    <div class="mt-2">
+      <input type="text" placeholder="Cari informasi..." class="w-full px-3 py-1 border rounded text-black mb-2" />
+      <button class="w-full bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://khoiruddin94.wordpress.com/wp-content/uploads/2015/04/1.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4">
+    <h1 class="text-4xl font-bold mb-4">Kementerian Komunikasi dan Informatika</h1>
+    <p class="mb-6">Menuju Indonesia Terkoneksi, Semakin Digital, Semakin Maju</p>
+  </div>
+</section>
+
+<!-- Layanan -->
+<section class="bg-white py-10 px-6">
+  <h2 class="text-2xl font-semibold mb-8 text-center text-orange-700">Layanan Utama</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="bg-orange-50 p-6 text-center shadow hover:shadow-lg">
+      <div class="text-4xl mb-4 text-orange-600">📄</div>
+      <h3 class="font-semibold text-lg mb-2">Permohonan Informasi</h3>
+      <p class="text-sm">Ajukan permohonan informasi publik secara online.</p>
+    </div>
+    <div class="bg-orange-50 p-6 text-center shadow hover:shadow-lg">
+      <div class="text-4xl mb-4 text-orange-600">📝</div>
+      <h3 class="font-semibold text-lg mb-2">Pengajuan Keberatan</h3>
+      <p class="text-sm">Sampaikan keberatan atas informasi yang diterima.</p>
+    </div>
+    <div class="bg-orange-50 p-6 text-center shadow hover:shadow-lg">
+      <div class="text-4xl mb-4 text-orange-600">📊</div>
+      <h3 class="font-semibold text-lg mb-2">Statistik Layanan</h3>
+      <p class="text-sm">Lihat statistik permohonan informasi & aduan.</p>
+    </div>
+    <div class="bg-orange-50 p-6 text-center shadow hover:shadow-lg">
+      <div class="text-4xl mb-4 text-orange-600">📢</div>
+      <h3 class="font-semibold text-lg mb-2">Informasi Berkala</h3>
+      <p class="text-sm">Dokumen-dokumen yang disediakan secara rutin.</p>
+    </div>
+  </div>
+
+  <section id="Berita" class="px-4 py-10 max-w-screen-xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-6 text-orange-700 text-center">Berita Terbaru</h2>
+  
+    <div class="grid md:grid-cols-2 gap-6">
+  
+      <!-- Artikel Utama -->
+      <article class="bg-white shadow-md rounded overflow-hidden flex flex-col">
+        <img
+          src="https://asset.kompas.com/crops/4G4TpuzzN8NKURjcV29JynzMHKc=/0x0:0x0/1200x800/data/photo/2024/06/19/6672561d20e0e.jpg"
+          alt="Maraknya Judi Online" class="w-full h-64 object-cover">
+        <div class="p-4 flex flex-col flex-grow">
+          <h3 class="text-xl font-bold mb-1">Maraknya Judi Online</h3>
+          <p class="text-xs text-gray-500 mb-2">8 Juli 2025 • Admin Kominfo</p>
+          <p class="text-sm text-gray-600 mb-4">
+            Kominfo memberantas peredaran judi online yang marak di tengah masyarakat.
+          </p>
+          <div class="mt-auto text-right">
+            <a href="Berita/MaraknyaJudiOnline.html"
+              class="inline-block px-3 py-1 text-sm border border-orange-500 text-orange-600 rounded hover:bg-orange-50 transition">
+              Baca Selengkapnya
+            </a>
+          </div>
+        </div>
+      </article>
+  
+      <!-- Artikel Singkat -->
+      <div class="flex flex-col gap-4">
+  
+        <article class="flex gap-4 bg-white shadow-sm rounded overflow-hidden p-2 items-center">
+          <img src="https://cdn.antaranews.com/cache/1200x800/2022/04/26/WhatsApp-Image-2022-04-26-at-4.49.39-PM.v1.jpg"
+            alt="Transformasi Digital" class="w-28 h-20 object-cover rounded">
+          <div class="flex-1">
+            <a href="#" class="text-sm font-semibold block hover:underline">Transformasi Digital Nasional</a>
+            <p class="text-xs text-gray-500 mb-1">8 Juli 2025 • Admin</p>
+            <p class="text-xs text-gray-600">Pemerintah dorong transformasi digital di sektor publik dan swasta.</p>
+          </div>
+        </article>
+  
+        <article class="flex gap-4 bg-white shadow-sm rounded overflow-hidden p-2 items-center">
+          <img src="https://unair.ac.id/wp-content/uploads/2024/06/keamanan-siber.jpg" alt="Keamanan Siber"
+            class="w-28 h-20 object-cover rounded">
+          <div class="flex-1">
+            <a href="#" class="text-sm font-semibold block hover:underline">Keamanan Siber Nasional</a>
+            <p class="text-xs text-gray-500 mb-1">8 Juli 2025 • Admin</p>
+            <p class="text-xs text-gray-600">Kolaborasi antar lembaga dalam meningkatkan keamanan siber nasional.</p>
+          </div>
+        </article>
+  
+        <article class="flex gap-4 bg-white shadow-sm rounded overflow-hidden p-2 items-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ802_9maAg4kJQuI6A22l01xrTmScAIn4tVg&s"
+            alt="NBA Summer League" class="w-28 h-20 object-cover rounded">
+          <div class="flex-1">
+            <a href="#" class="text-sm font-semibold block hover:underline">NBA Summer League 2025</a>
+            <p class="text-xs text-gray-500 mb-1">8 Juli 2025 • Admin</p>
+            <p class="text-xs text-gray-600">NBA Highlight Summer League 2025</p>
+          </div>
+        </article>
+  
+        <div class="text-right mt-2">
+          <a href="#"
+            class="inline-block px-3 py-1 text-sm border border-orange-500 text-orange-600 rounded hover:bg-orange-50 transition">
+            Berita Lainnya
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+</section>
+
+<section class="p-6 bg-white mt-10 text-center">
+  <h2 class="text-2xl font-semibold mb-6 text-orange-700">Galeri Kegiatan</h2>
+
+  <div class="flex justify-center gap-4 mb-6">
+    <label for="galeri-foto"
+      class="cursor-pointer px-4 py-2 bg-orange-500 text-white rounded-md peer-checked:bg-orange-600 transition">
+      Foto
+    </label>
+    <label for="galeri-video"
+      class="cursor-pointer px-4 py-2 bg-gray-200 text-gray-700 rounded-md peer-checked:bg-orange-600 transition">
+      Video
+    </label>
+  </div>
+
+  <!-- Tab Control (Radio buttons hidden) -->
+  <input type="radio" name="galeri" id="galeri-foto" class="hidden peer/foto" checked>
+  <input type="radio" name="galeri" id="galeri-video" class="hidden peer/video">
+
+  <!-- Konten Foto -->
+  <div class="peer-checked/foto:block hidden">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVH1jbjaDTZ6YTWZ0O6UyW33ZttGETkkmKUA&s"
+        class="h-48 w-full object-cover rounded shadow" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzxSh-GpKg5snDBcAJO3vMzAPjesP1O_TXw&s"
+        class="h-48 w-full object-cover rounded shadow" />
+      <img src="https://lampung.rilis.id/image/2023/02/2648dVM89_IMG-20230226-WA0049.jpg"
+        class="h-48 w-full object-cover rounded shadow" />
+      <img
+        src="https://cdn.antaranews.com/cache/1200x800/2025/03/13/Snapinst.app_483968223_18403531510101734_8801310192692851916_n_1080-1.jpg"
+        class="h-48 w-full object-cover rounded shadow" />
+    </div>
+  </div>
+
+  <!-- Konten Video -->
+  <div class="peer-checked/video:block hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="h-48 w-full overflow-hidden rounded shadow">
+        <iframe class="w-full h-full object-cover" src="https://www.youtube.com/embed/d8R7brCGUqo" title="Video 1"
+          allowfullscreen></iframe>
+      </div>
+      <div class="h-48 w-full overflow-hidden rounded shadow">
+        <iframe class="w-full h-full object-cover" src="https://www.youtube.com/embed/d8R7brCGUqo" title="Video 2"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="Kontak" class="bg-orange-700 text-white pt-10 pb-6">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+
+    <!-- Tentang Kominfo -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Tentang Kominfo</h3>
+      <p class="text-sm leading-relaxed">
+        Kementerian Komunikasi dan Informatika Republik Indonesia hadir dalam mendukung transformasi digital nasional
+        dan mendorong keterbukaan informasi publik.
+      </p>
+    </div>
+
+    <!-- Kontak Kami -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Kontak Kami</h3>
+      <ul class="text-sm space-y-1">
+        <li>📍 Jl. Raya Gedong Tataan, Pesawaran, Lampung</li>
+        <li>📧 <a href="mailto:info@kominfo.go.id" class="underline hover:text-orange-200">info@kominfo.go.id</a></li>
+        <li>📞 (0721) 123456</li>
+      </ul>
+    </div>
+
+    <!-- Tautan Cepat -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Tautan Cepat</h3>
+      <ul class="text-sm space-y-1">
+        <li><a class="hover:underline hover:text-orange-200" href="#">Beranda</a></li>
+        <li><a class="hover:underline hover:text-orange-200" href="#">Profil</a></li>
+        <li><a class="hover:underline hover:text-orange-200" href="#">Layanan</a></li>
+        <li><a class="hover:underline hover:text-orange-200" href="#">Berita</a></li>
+        <li><a class="hover:underline hover:text-orange-200" href="#">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Lokasi -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Lokasi</h3>
+      <iframe class="w-full h-40 rounded"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63707.82801520806!2d105.0125398!3d-5.3828418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c517fffffffb%3A0x3c7de6600b51c5b5!2sGedong%20Tataan%2C%20Kabupaten%20Pesawaran!5e0!3m2!1sid!2sid!4v1689856929573!5m2!1sid!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-orange-500 mt-8 pt-4 text-center text-sm">
+    &copy; 2025 KOMINFO Kabupaten Pesawaran. Dibuat dengan ❤ untuk masyarakat Indonesia.
+  </div>
+</footer>
+
+
+</body>
+</html>

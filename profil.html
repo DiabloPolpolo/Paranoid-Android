@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png"
+        type="image/png">
+    <title>Kominfo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-orange-500 text-white sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
+            <div class="flex items-center gap-3">
+                <img src="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" alt="Logo"
+                    class="h-10">
+                <span class="text-xl font-semibold">KOMINFO</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="hover:underline">Beranda</a>
+                <a href="profil.html" class="hover:underline">Profil</a>
+                <div class="relative group">
+                    <button class="hover:underline">Layanan</button>
+                    <div class="absolute hidden group-hover:block bg-white text-black mt-2 shadow-lg rounded w-52">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Permohonan Informasi</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pengajuan Keberatan</a>
+                    </div>
+                </div>
+                <a href="index.html/#Berita" class="hover:underline">Berita</a>
+                <a href="#" class="hover:underline">Kontak</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-2">
+                <input type="text" placeholder="Cari informasi..."
+                    class="w-48 px-2 py-1 text-sm border rounded text-black" />
+                <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1 rounded text-sm">Cari</button>
+            </div>
+            <div class="md:hidden">
+                <!-- Simple mobile nav toggle omitted for pure Tailwind version -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Profil Section -->
+    <section class="bg-white py-10 px-4 md:px-10">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl font-bold text-orange-700 mb-6 text-center">Profil PPID Kabupaten Pesawaran</h1>
+            <div class="max-w-none text-justify text-gray-700 leading-relaxed">
+                <p>
+                    Pejabat Pengelola Informasi dan Dokumentasi (PPID) Kabupaten Pesawaran merupakan unit kerja yang
+                    bertugas untuk mengelola dan memberikan pelayanan informasi publik sesuai dengan amanat
+                    Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.
+                </p>
+                <p class="mt-4">
+                    PPID memiliki peran penting dalam menjamin hak masyarakat untuk memperoleh informasi yang benar,
+                    cepat, dan akurat serta mendorong partisipasi aktif masyarakat dalam penyelenggaraan pemerintahan
+                    yang transparan dan akuntabel.
+                </p>
+                <h2 class="text-xl font-semibold text-orange-600 mt-6">Visi</h2>
+                <p class="mt-2">
+                    Terwujudnya pelayanan informasi publik yang transparan, cepat, dan akurat untuk mendukung tata
+                    kelola pemerintahan yang baik di Kabupaten Pesawaran.
+                </p>
+                <h2 class="text-xl font-semibold text-orange-600 mt-6">Misi</h2>
+                <ul class="list-disc pl-6 mt-2">
+                    <li>Meningkatkan kualitas layanan informasi publik secara cepat dan tepat.</li>
+                    <li>Meningkatkan kapasitas dan kapabilitas pengelola informasi publik.</li>
+                    <li>Menjamin terpenuhinya hak masyarakat atas informasi publik.</li>
+                    <li>Mendorong partisipasi masyarakat dalam pengawasan penyelenggaraan pemerintahan.</li>
+                </ul>
+                <h2 class="text-xl font-semibold text-orange-600 mt-6">Tugas Pokok dan Fungsi</h2>
+                <p class="mt-2">PPID Kabupaten Pesawaran memiliki tugas pokok:</p>
+                <ul class="list-decimal pl-6 mt-2">
+                    <li>Mengelola dan mendokumentasikan informasi publik.</li>
+                    <li>Memberikan pelayanan informasi kepada masyarakat.</li>
+                    <li>Menjamin ketersediaan dan aksesibilitas informasi publik.</li>
+                    <li>Melakukan pengklasifikasian informasi.</li>
+                    <li>Menindaklanjuti permintaan dan keberatan atas informasi.</li>
+                </ul>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="index.html"
+                    class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded">← Kembali ke
+                    Beranda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-orange-700 text-white pt-10 pb-6">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Tentang Kominfo</h3>
+                <p class="text-sm leading-relaxed">
+                    Kementerian Komunikasi dan Informatika Republik Indonesia hadir dalam mendukung transformasi digital
+                    nasional dan mendorong keterbukaan informasi publik.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Kontak Kami</h3>
+                <ul class="text-sm space-y-1">
+                    <li>📍 Jl. Raya Gedong Tataan, Pesawaran, Lampung</li>
+                    <li>📧 <a href="mailto:info@kominfo.go.id"
+                            class="underline hover:text-orange-200">info@kominfo.go.id</a></li>
+                    <li>📞 (0721) 123456</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Tautan Cepat</h3>
+                <ul class="text-sm space-y-1">
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Beranda</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Profil</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Layanan</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Berita</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Lokasi</h3>
+                <iframe class="w-full h-40 rounded"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63707.82801520806!2d105.0125398!3d-5.3828418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c517fffffffb%3A0x3c7de6600b51c5b5!2sGedong%20Tataan%2C%20Kabupaten%20Pesawaran!5e0!3m2!1sid!2sid!4v1689856929573!5m2!1sid!2sid"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        <div class="border-t border-orange-500 mt-8 pt-4 text-center text-sm">
+            &copy; 2025 KOMINFO Kabupaten Pesawaran. Dibuat dengan ❤ untuk masyarakat Indonesia.
+        </div>
+    </footer>
+
+</body>
+
+</html>
