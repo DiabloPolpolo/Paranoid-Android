@@ -10,56 +10,68 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
  
-<nav class="bg-orange-500 text-white sticky top-0 z-50">
-  <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
-    <div class="flex items-center gap-3">
-      <img src="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" alt="Logo" class="h-10">
-      <span class="text-xl font-semibold">KOMINFO</span>
+  <nav class="bg-orange-500 text-white sticky top-0 z-50">
+    <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
+      <div class="flex items-center gap-3">
+        <img src="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" alt="Logo"
+          class="h-10" />
+        <span class="text-xl font-semibold">KOMINFO</span>
+      </div>
+  
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#" class="hover:underline">Beranda</a>
+        <a href="profil.html" class="hover:underline">Profil</a>
+        <div class="relative group">
+          <button class="hover:underline">Layanan</button>
+          <div class="absolute hidden group-hover:block bg-white text-black shadow-md rounded mt-2 w-52 z-10">
+            <a href="Layanan/permohonan.html" class="block px-4 py-2 hover:bg-gray-100">Permohonan Informasi</a>
+            <a href="Layanan/pengajuan.html" class="block px-4 py-2 hover:bg-gray-100">Pengajuan Keberatan</a>
+          </div>
+        </div>
+        <a href="#Berita" class="hover:underline">Berita</a>
+        <a href="#Kontak" class="hover:underline">Kontak</a>
+        <input type="text" placeholder="Cari informasi..."
+          class="w-48 px-3 py-1 rounded border border-gray-300 text-black" />
+        <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
+      </div>
+  
+      <div class="md:hidden">
+        <button id="menu-button" class="focus:outline-none">
+          <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="hidden md:flex items-center gap-6">
-      <a href="#" class="hover:underline">Beranda</a>
-      <a href="profil.html" class="hover:underline">Profil</a>
-      <div class="relative group">
-        <button class="hover:underline">Layanan</button>
-        <div class="absolute hidden group-hover:block bg-white text-black shadow-md rounded mt-2 w-52">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Permohonan Informasi</a>
-          <a href="Layanan/pengajuan.html" class="block px-4 py-2 hover:bg-gray-100">Pengajuan Keberatan</a>
+  
+    <div id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 bg-orange-500 text-white">
+      <a href="#" class="block py-2">Beranda</a>
+      <a href="profil.html" class="block py-2">Profil</a>
+      <div>
+        <span class="block py-2">Layanan</span>
+        <div class="pl-4">
+          <a href="Layanan/permohonan.html" class="block py-1 text-sm">Permohonan Informasi</a>
+          <a href="Layanan/pengajuan.html" class="block py-1 text-sm">Pengajuan Keberatan</a>
         </div>
       </div>
-      <a href="#Berita" class="hover:underline">Berita</a>
-      <a href="#Kontak" class="hover:underline">Kontak</a>
-    </div>
-    <div class="hidden md:flex items-center gap-2">
-      <input type="text" placeholder="Cari informasi..." class="w-48 px-3 py-1 rounded border border-gray-300 text-black" />
-      <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
-    </div>
-    <div class="md:hidden">
-      <button id="mobile-menu-toggle" class="focus:outline-none">
-        <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-    <a href="#" class="block py-2">Beranda</a>
-    <a href="profil.html" class="block py-2">Profil</a>
-    <div>
-      <span class="block py-2">Layanan</span>
-      <div class="pl-4">
-        <a href="#" class="block py-1 text-sm">Permohonan Informasi</a>
-        <a href="Layanan/pengajuan.html" class="block py-1 text-sm">Pengajuan Keberatan</a>
+      <a href="#Berita" class="block py-2">Berita</a>
+      <a href="#Kontak" class="block py-2">Kontak</a>
+      <div class="mt-2">
+        <input type="text" placeholder="Cari informasi..." class="w-full px-3 py-1 border rounded text-black mb-2" />
+        <button class="w-full bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
       </div>
     </div>
-    <a href="#Berita" class="block py-2">Berita</a>
-    <a href="#Kontak" class="block py-2">Kontak</a>
-    <div class="mt-2">
-      <input type="text" placeholder="Cari informasi..." class="w-full px-3 py-1 border rounded text-black mb-2" />
-      <button class="w-full bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
-    </div>
-  </div>
-</nav>
+  </nav>
+  
+  <script>
+    const button = document.getElementById('menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  
  
 <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://khoiruddin94.wordpress.com/wp-content/uploads/2015/04/1.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4">
