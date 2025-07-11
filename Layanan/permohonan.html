@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Permohonan Informasi</title>
+    <link rel="icon" href="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png"
+        type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+ 
+    <nav class="bg-orange-500 text-white sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
+            <div class="flex items-center gap-3">
+                <img src="https://direktori.info.go.id/kominfo/static/img/logos/Kabupaten_Pesawaran.png" alt="Logo"
+                    class="h-10" />
+                <span class="text-xl font-semibold">KOMINFO</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="../index.html" class="hover:underline">Beranda</a>
+                <a href="../profil.html" class="hover:underline">Profil</a>
+                <div class="relative group">
+                    <button class="hover:underline">Layanan</button>
+                    <div class="absolute hidden group-hover:block bg-white text-black shadow-md rounded mt-2 w-52 z-10">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Permohonan Informasi</a>
+                        <a href="pengajuan.html" class="block px-4 py-2 hover:bg-gray-100">Pengajuan Keberatan</a>
+                    </div>
+                </div>
+                <a href="../index.html#Berita" class="hover:underline">Berita</a>
+                <a href="#Kontak" class="hover:underline">Kontak</a>
+                <input type="text" placeholder="Cari informasi..."
+                    class="w-48 px-3 py-1 rounded border border-gray-300 text-black" />
+                <button class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="focus:outline-none">
+                    <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 bg-orange-600 text-white">
+            <a href="../index.html" class="block py-2">Beranda</a>
+            <a href="../profil.html" class="block py-2">Profil</a>
+            <div>
+                <span class="block py-2">Layanan</span>
+                <div class="pl-4">
+                    <a href="#" class="block py-1 text-sm">Permohonan Informasi</a>
+                    <a href="pengajuan.html" class="block py-1 text-sm">Pengajuan Keberatan</a>
+                </div>
+            </div>
+            <a href="../index.html#Berita" class="block py-2">Berita</a>
+            <a href="#Kontak" class="block py-2">Kontak</a>
+            <div class="mt-2">
+                <input type="text" placeholder="Cari informasi..."
+                    class="w-full px-3 py-1 border rounded text-black mb-2" />
+                <button class="w-full bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">Cari</button>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const button = document.getElementById('menu-button');
+        const menu = document.getElementById('mobile-menu');
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+ 
+    <section class="bg-gray-50 py-10 px-4 md:px-10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-orange-700 mb-6 text-center">Form Permohonan Informasi</h2>
+            <form class="space-y-6 bg-white p-6 rounded-xl shadow-md" action="proses_permohonan.html" method="POST">
+                <div>
+                    <label class="block font-semibold mb-1">Nama Lengkap</label>
+                    <input type="text" name="nama" class="w-full px-3 py-2 border rounded text-sm" required />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Alamat</label>
+                    <input type="text" name="alamat" class="w-full px-3 py-2 border rounded text-sm" required />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Email</label>
+                    <input type="email" name="email" class="w-full px-3 py-2 border rounded text-sm" required />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Nomor Telepon</label>
+                    <input type="text" name="telepon" class="w-full px-3 py-2 border rounded text-sm" required />
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Informasi yang Dimohonkan</label>
+                    <textarea name="informasi_dimohonkan" class="w-full px-3 py-2 border rounded text-sm"
+                        required></textarea>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Tujuan Penggunaan Informasi</label>
+                    <textarea name="tujuan_penggunaan" class="w-full px-3 py-2 border rounded text-sm"
+                        required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded font-semibold">
+                        Kirim Permohonan
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+ 
+    <footer id="Kontak" class="bg-orange-700 text-white pt-10 pb-6">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Tentang Kominfo</h3>
+                <p class="text-sm leading-relaxed">
+                    Kementerian Komunikasi dan Informatika Republik Indonesia hadir dalam mendukung transformasi digital
+                    nasional dan mendorong keterbukaan informasi publik.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Kontak Kami</h3>
+                <ul class="text-sm space-y-1">
+                    <li>📍 Jl. Raya Gedong Tataan, Pesawaran, Lampung</li>
+                    <li>📧 <a href="mailto:info@kominfo.go.id"
+                            class="underline hover:text-orange-200">info@kominfo.go.id</a></li>
+                    <li>📞 (0721) 123456</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Tautan Cepat</h3>
+                <ul class="text-sm space-y-1">
+                    <li><a class="hover:underline hover:text-orange-200" href="../index.html">Beranda</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="../profil.html">Profil</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Layanan</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#">Berita</a></li>
+                    <li><a class="hover:underline hover:text-orange-200" href="#Kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Lokasi</h3>
+                <iframe class="w-full h-40 rounded"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63707.82801520806!2d105.0125398!3d-5.3828418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c517fffffffb%3A0x3c7de6600b51c5b5!2sGedong%20Tataan%2C%20Kabupaten%20Pesawaran!5e0!3m2!1sid!2sid!4v1689856929573!5m2!1sid!2sid"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="border-t border-orange-500 mt-8 pt-4 text-center text-sm">
+            &copy; 2025 KOMINFO Kabupaten Pesawaran. Dibuat dengan ❤ untuk masyarakat Indonesia.
+        </div>
+    </footer>
+
+</body>
+
+</html>
